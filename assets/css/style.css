@@ -1,0 +1,70 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url(../images/Moss-detail.jpg);
+}
+
+header {
+    width: 100%;
+    background-image: url(../images/sedum.png);
+    padding: 20px 0px 20px 0px;
+    border-bottom: solid 4px black;
+}
+
+#headerText {
+    background-image: url(../images/green_cup/green_cup.png);
+    margin: 20px 30% 20px 30%;
+    padding: 10px;
+    overflow: auto;
+   text-align: center;
+   border: solid 2px black;
+   font-family: 'Annie Use Your Telescope', cursive;
+}
+
+#headerText h1 {
+    font-size: 60px;
+    background-color: #8FBC8F;
+    border: solid 2px black;
+    overflow: auto;
+    margin-bottom: 10px;
+}
+
+#headerText h2 {
+    font-size: 50px;
+    background-color: #8FBC8F;
+    border: solid 2px black;
+    overflow: auto;
+    padding: 10px 0px 10px 0px;
+}
+
+/* Background pattern from Toptal Subtle Patterns */
+#container {
+    font-family: 'Patrick Hand', cursive;
+    font-size: 30px;
+    margin: 20px 15% 20px 15%;
+    background-image: url(../images/green_cup/green_cup.png);
+    line-height: 1.6;
+    border: solid 2px black;
+}
+
+#timer {
+    background-color: #8FBC8F;
+    margin: 20px 25% 0px 25%;
+    border: solid 2px black;
+    text-align: center;
+}
+
+#questions {
+    margin: 25px;
+}
+
+#questions h2 {
+    border-top: green double 1px;
+    margin-top: 20px;
+}
+
+.question {
+    margin-bottom: 30px;
+}
