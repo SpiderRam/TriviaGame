@@ -43,10 +43,28 @@ header {
 #container {
     font-family: 'Patrick Hand', cursive;
     font-size: 30px;
-    margin: 20px 15% 20px 15%;
+    margin: 20px 16% 20px 16%;
     background-image: url(../images/green_cup/green_cup.png);
     line-height: 1.6;
     border: solid 2px black;
+}
+
+#startContainer {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    background-image: url(../images/sprout_2.png);
+    border-bottom: solid 2px black;
+}
+
+#start {
+    margin-left: 55%;
+    background-color: #5F9EA0;
+    color: #9ACD32;
+    border: 2px solid black;
+    border-radius: 12px;
+    padding: 20px 50px;
+    font-size: 30px;
+    text-shadow: 3px 3px #008000;
 }
 
 #timer {
@@ -67,4 +85,25 @@ header {
 
 .question {
     margin-bottom: 30px;
+}
+
+.answers {
+    margin: 0px 5px 5px 10px;
+}
+
+#submitContainer {
+    background-image: url(../images/blue_hosta.png);
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+#submit {
+    margin: 10px 40%;
+    background-color: #F0F8FF;
+    color: #5F9EA0;
+    border: 2px solid #2F4F4F;
+    border-radius: 12px;
+    padding: 15px 40px;
+    font-size: 30px;
+    text-shadow: 2px 2px #2F4F4F;
 }

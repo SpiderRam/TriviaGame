@@ -63,25 +63,7 @@ const questions = [
 
 
 
-var counter = 120;
-
-var timer; 
-
-function getAnswers () {
-    let answers = [];
-    $("input:radio").each(function () {
-    var $this = $(this),
-        id = $this.attr('id');
-
-       if ($(this).prop(':checked')) {
-            answers.push(this);
-       }
-
-   });
-
-   console.log(answers);
-   return answers;
-}
+let counter = 120;
 
 function countDown(){
     counter --;
@@ -92,47 +74,27 @@ function countDown(){
     }
 }
 
-function startGame() {
-    
-    timer = setInterval (countDown, 1000);
-    
 
-    document.getElementById("gameBody").style.visibility = "visible";
-    
+
+function startGame() {
+    document.getElementById("contnr").style.visibility = "block";
+    setInterval (countDown, 1000);
+
     for (var i = 0; i < questions.length; i++) {
-        var idName1 = "question" + i;
-        
-        
         $("#questions").append("<h2>" + questions[i].question + "</h2>");
         for (var j = 0; j < questions[i].answers.length; j++) {
-            var idName2 = "answer" + j;
-            var idNameStrng = idName1 + idName2;
             $("#questions").append("<input type='radio' name='question-" + i +
-                "' value='" + questions[i].answers[j] + "' id='" + idNameStrng + "' class='answers'>" + questions[i].answers[j]);
+                "' value='" + questions[i].answers[j] + "''>" + questions[i].answers[j]);
         }
     }
 
 }
 
 $("#start").on("click", startGame);
-$("#submit").on("click", getAnswers);
 
 
 
 
-//get user input-- :checked in jQuery?
 
-//check for right or wrong or incomplete-- $.each() in jQuery - check the user values using the name property?
-
-//record each type
-
-//display a count of each type
-
-//compile and display results when the timer runs out or when submit button is clicked
-
-//line breaks in Question 7-- how to get \n into the JS?  Easier to do all of them on separate lines?
-
-//How to style buttons, no CSS will work except left margin
-
-
-
+// $.each() in jQuery - check your user values using the name property
+// 
