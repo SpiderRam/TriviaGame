@@ -107,3 +107,35 @@ header {
     font-size: 30px;
     text-shadow: 2px 2px #2F4F4F;
 }
+
+#resultsBox {
+    margin: 100px 35%;
+    background-image: url("../images/green_cup/green_cup.png");
+    padding: 20px 50px;
+    border: 2px solid black;
+    overflow: auto;
+}
+
+#tallyHead {
+    font-family: 'Annie Use Your Telescope', cursive;
+    font-size: 48px;
+    text-align: center;
+    border-bottom: 2px solid black;
+}
+
+.tally {
+    font-family: 'Annie Use Your Telescope', cursive;
+    font-size: 40px;
+}
+
+#resetGame {
+    margin-left: 5%;
+    
+    background-color: #5F9EA0;
+    color: #9ACD32;
+    border: 2px solid black;
+    border-radius: 12px;
+    padding: 20px 50px;
+    font-size: 30px;
+    text-shadow: 3px 3px #008000;
+}
