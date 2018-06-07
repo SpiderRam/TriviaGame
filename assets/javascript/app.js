@@ -66,7 +66,7 @@ const questions = [
 var counter = 120;
 var numberCorrect = 0;
 var numberWrong = 0;
-var numberUnanswered = 0;
+
 
 var timer; 
 
@@ -152,27 +152,25 @@ function getAnswers() {
     $.each($("input[name='question-10']:checked"), function(){
         if($(this).val() === questions[10].correctAnswer){
             numberCorrect ++;
-        } else if($(this).val() !== questions[10].correctAnswer) {
-            numberWrong ++;
-        } else if ($("input[name='question-10']:not(:checked)")) {
-            numberUnanswered ++;
-        };
-
-    });
-    $.each($("input[name='question-11']:checked"), function(){
-        if($(this).val() === questions[11].correctAnswer){
-            numberCorrect ++;
-        } else if($(this).val() == null) {
-            numberUnanswered ++;
         } else {
             numberWrong ++;
         };
+
+        });
+    
+    $.each($("input[name='question-11']:checked"), function(){
+        if($(this).val() === questions[11].correctAnswer){
+            numberCorrect ++;
+        } else {
+            numberWrong ++;
+        };
+
+        });
         
         
-    });
     console.log(numberCorrect);
     console.log(numberWrong);
-    console.log(numberUnanswered);
+    
     showResults();
 }
 
@@ -183,6 +181,7 @@ function countDown(){
     
     if (counter == 0) {
         clearInterval (timer);
+        getAnswers();
     }
 }
 
@@ -217,31 +216,12 @@ var restoreContainer = null;
 function showResults() {
     hideContainer = $("#container").detach();
     $("#container").html(hideContainer);
-    $("#resultsBox").append("<p id='tallyHead'>Results:</p><br> <p class='tally'>Correct: " + numberCorrect + "</p><br> <p class='tally'>Incorrect: " + numberWrong + "</p> <br><br> <button id='resetGame'>Play Again!</button>");
-}
-
-function resetGame() {
-    var counter = 120;
-    var numberCorrect = 0;
-    var numberWrong = 0;
-    var numberUnanswered = 0;
-    document.getElementById("gameBody").style.visibility = "hidden";
-    restoreContainer = $("#container").attach();
-    $("#container").html(restoreContainer);
+    $("#resultsBox").append("<p id='tallyHead'>Results:</p><br> <p class='tally'>Correct: " + numberCorrect + "</p><br> <p class='tally'>Incorrect: " + numberWrong + "</p>");
 }
 
 
-$("#resetGame").on("click", resetGame);
 
 
 
-
-//How to check for unanswered?  Two solutions not working.
-
-//Start over when Play Again! is clicked.
-
-//line breaks in Question 7-- how to get \n into the JS?  Easier to do all of them on separate lines?
-
-//How to style buttons, no CSS will work except left margin
 
 
