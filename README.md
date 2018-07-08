@@ -1,32 +1,23 @@
 # TriviaGame
 
-This was the homework assignment for week four of the bootcamp.  The requirements were:
+This was the homework assignment for week five of the bootcamp.  The requirements were:
 
+~You'll create a trivia form with multiple choice or true/false options (your choice).
 
-~There will be four crystals displayed as buttons on the page.
+~The player will have a limited amount of time to finish the quiz. 
 
-~The player will be shown a random number at the start of the game.
+~The game ends when the time runs out. The page will reveal the number of questions that players answer correctly and incorrectly.
 
-~When the player clicks on a crystal, it will add a specific amount of points to the player's total score. 
+~Don't let the player pick more than one answer per question.
 
-~Your game will hide this amount until the player clicks a crystal.
+~Don't forget to include a countdown timer.
 
-~When they do click one, update the player's score counter.
+Opportunities for improvement:  
 
-~The player wins if their total score matches the random number from the beginning of the game.
+--better styling of the radio buttons, and hiding the empty space rather than just the content.
 
-~The player loses if their score goes above the random number.
+--make the results sharable (on Facebook, etc.)
 
-~The game restarts whenever the player wins or loses.
+--add easier and harder levels, unlock when user scores perfect
 
-~When the game begins again, the player should see a new random number. Also, all the crystals will have four new hidden values. Of course, the user's score (and score counter) will reset to zero.
-
-~The app should show the number of games the player wins and loses. To that end, do not refresh the page as a means to restart the game.
-
-~The random number shown at the start of the game should be between 19 - 120.
-
-~Each crystal should have a random hidden value between 1 - 12.
-
-Goals for improvement:
-
---The CSS styling could be much better.  We were given an example to match, but it is very basic.
+--show the wrong answers and provide the correct ones
